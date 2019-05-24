@@ -1,0 +1,48 @@
+# Кэш
+
+.DS_Store
+
+__pycache__/
+*.pyc
+
+vk_config.json
+vk_config.v2.json
+
+*.session
+*.session-journal
+
+.ipynb_checkpoints/
+
+.idea/
+.vscode/
+
+## JS
+
+node_modules/
+package-lock.json
+dist/
+build/
+
+## Мобильная разработка
+
+.expo/
+.expo-shared/
+
+# Ключи и настройки
+
+keys.py
+keys.json
+keys.js
+
+# Данные
+
+# Библиотеки
+
+# Виртуальное окружение
+
+env/
+
+# Авторские права
+
+*.otf
+*.ttf
