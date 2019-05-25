@@ -41,3 +41,25 @@
     color: #fff;
     z-index: 10;
 }
+
+.map div {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 50px;
+    background: #6db133;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding-bottom: 10px;
+}
+
+.map div a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.map img {
+    margin: 15vh auto;
+    width: 100%;
+}

@@ -17,7 +17,7 @@
   top: 0;
   height: 100%;
   padding-right: 11px;
-  border-right: 2px solid #f2f2f2;
+  border-right: 2px solid #6db1336b;
   content: '';
 }
 
@@ -53,7 +53,7 @@
 }
 
 .timeline__step__marker--blue {
-  border-color: #18d0bf;
+  border-color: #6db133;
 }
 
 .timeline__step__marker--salmon {
@@ -91,7 +91,7 @@
   }
 
   .timeline {
-    padding: 0 35.42857px;
+    padding: 0 10px;
   }
   .timeline::before {
     padding-right: 6.28571px;
@@ -100,7 +100,7 @@
     padding: 25px 0;
   }
   .timeline__step {
-    padding-right: 35.42857px;
+    padding-right: 25px;
   }
   .timeline__step__marker {
     height: 13.71429px;
@@ -131,8 +131,7 @@
 }
 
 .card {
-  margin-top: 102px;
+  margin-top: 50px;
   line-height: 1.5rem;
-  font-weight: 300;
   box-sizing: border-box;
 }

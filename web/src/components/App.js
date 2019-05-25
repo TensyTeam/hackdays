@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-import { BrowserRouter, Route, Switch, Redirect, browserHistory } from "react-router-dom"
+import { BrowserRouter, Route, Switch } from "react-router-dom"
 
 import Timeline from './Timeline'
 import Map from './Map'
@@ -17,9 +17,6 @@ class App extends Component {
 	render() {
 		return (
 			<BrowserRouter>
-				{/* <div className="has-background-white-bis" style={ {minHeight: '100vh'} }>
-					<Timeline />
-				</div> */}
 				<Header />
 				<Switch>
 					<Route exact path="/">
@@ -32,7 +29,7 @@ class App extends Component {
 					</Route>
 				</Switch>
 				<Switch>
-					<Route exact path="/map">
+					<Route path="/map">
 						<Map />
 					</Route>
 				</Switch>
