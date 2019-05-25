@@ -55,7 +55,7 @@ export default function MapDens(props) {
 &h=' + props.height + '\
 &w=' + props.width + '\
 &op=70\
-&pixelRatio=1'}
+&ppi=320'}
 		/>
 	)
 }

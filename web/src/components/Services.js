@@ -5,6 +5,9 @@ export default class Services extends React.Component {
 	render() {
 		return (
 			<div className="services-list">
+				<div className="shadow">
+					Comming soon
+				</div>
 				<div className="service">
 					Cleaning
 				</div>
