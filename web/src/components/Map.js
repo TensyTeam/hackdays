@@ -1,6 +1,8 @@
 import React from 'react'
 import { Link } from "react-router-dom"
 
+import MapDens from './MapDens'
+
 
 export default class Map extends React.Component {
 	constructor (props) {
@@ -30,7 +32,7 @@ export default class Map extends React.Component {
 					<img src="/../img/map1.png"/>
 				}
 				{this.state.path === '/map/density' &&
-					<img src="/../img/map2.png"/>
+					<MapDens width="400" height="250" />
 				}
 			</div>
 		)
