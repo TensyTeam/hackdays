@@ -55,6 +55,10 @@ export const events = [{
 	'description': 'Design Offices Westendcarree',
 	'time': 1558810800,
 }, {
+	'name': 'Office closing',
+	'description': 'Design Offices Westendcarree',
+	'time': 1558832400,
+}, {
 	'name': 'Breakfast',
 	'description': 'Hotel or Design Offices',
 	'time': 1558857600,
@@ -63,17 +67,25 @@ export const events = [{
 	'description': 'Design Offices Westendcarree',
 	'time': 1558861200,
 }, {
+	'name': 'Company-specific awards',
+	'description': 'Design Offices Westendcarree',
+	'time': 1558864800,
+}, {
 	'name': 'Break/Lunch',
-	'description': '',
+	'description': 'Grüneburgweg 26',
 	'time': 1558868400,
 }, {
 	'name': 'Final Pitches',
 	'description': 'Hörsaalzentrum Campus Westend',
-	'time': 1558875600,
+	'time': 1558872000,
 }, {
 	'name': 'Award Ceremony',
 	'description': 'Hörsaalzentrum Campus Westend',
-	'time': 1558886400,
+	'time': 1558879200,
+}, {
+	'name': 'Geoup picture',
+	'description': 'Hörsaalzentrum Campus Westend',
+	'time': 1558882800,
 }, {
 	'name': 'Ending',
 	'description': '',
