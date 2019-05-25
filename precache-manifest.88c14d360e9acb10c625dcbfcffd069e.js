@@ -16,7 +16,7 @@ self.__precacheManifest = [
     "url": "/hackdays/static/js/2.12a9643e.chunk.js"
   },
   {
-    "revision": "6f4c2e67fbe83c118530f16cf7b9c7ce",
+    "revision": "6d1a28aab6d7b4455339a629591489da",
     "url": "/hackdays/index.html"
   }
 ];
