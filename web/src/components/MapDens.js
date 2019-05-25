@@ -3,7 +3,7 @@ import React from 'react'
 
 export default function MapDens(props) {
 	return (
-		<img src={'https://image.maps.api.here.com/mia/1.6/heat\
+		<img className="map_density" src={'https://image.maps.api.here.com/mia/1.6/heat\
 ?app_id=qa0WJfBASLFPiWJIm8zA\
 &app_code=CSg50IevfYpGuIaHzNjj_Q\
 \
@@ -55,7 +55,7 @@ export default function MapDens(props) {
 &h=' + props.height + '\
 &w=' + props.width + '\
 &op=70\
-&r=10'}
+&pixelRatio=1'}
 		/>
 	)
 }

@@ -6,7 +6,7 @@ import { serverResponse, getSensors } from './Func/request';
 export default class Home extends React.Component {
 
 	componentDidMount() {
-		serverResponse(getSensors());
+		// serverResponse(getSensors());
 	}
 
 	render() {

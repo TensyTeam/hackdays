@@ -25,14 +25,18 @@ export default class Map extends React.Component {
 		return (
 			<div className="map">
 				<div>
-					<Link to="/map/temperature" onClick={()=>{this.onChange('/map/temperature')}}>Temperature</Link>
-					<Link to="/map/density" onClick={()=>{this.onChange('/map/density')}}>Density</Link>
+					<Link to="/map/temperature" onClick={()=>{this.onChange('/map/temperature')}} className={this.state.path === '/map/temperature' ? 'active' : '' }>Temperature</Link>
+					<Link to="/map/space" onClick={()=>{this.onChange('/map/space')}} className={this.state.path === '/map/space' ? 'active' : '' }>Space</Link>
+					<Link to="/map/density" onClick={()=>{this.onChange('/map/density')}} className={this.state.path === '/map/density' ? 'active' : '' }>Density</Link>
 				</div>
 				{this.state.path === '/map/temperature' &&
 					<img src="/../img/map1.png"/>
 				}
+				{this.state.path === '/map/space' &&
+					<img  src="/../img/map1.png"/>
+				}
 				{this.state.path === '/map/density' &&
-					<MapDens width="400" height="250" />
+					<MapDens width="100vw" height="100vh" />
 				}
 			</div>
 		)

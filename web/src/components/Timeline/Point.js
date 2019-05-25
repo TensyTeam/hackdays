@@ -7,9 +7,8 @@ export default function(props) {
 
 	const time1 = time.format('HH:mm')
 	const time2 = time.format('D MMMM')
-
 	return (
-		<li className="timeline__item" id={ props.time }>
+		<li id={ props.time } className={(props.nowElement === props.time) ? 'timeline__item now' : (props.time - 2 * 60 * 60 <= new Date().getTime() / 1000) ? 'timeline__item past' : 'timeline__item future'}>
 			<div className="timeline__step">
 				<div className="timeline__step__marker timeline__step__marker--blue"></div>
 			</div>
