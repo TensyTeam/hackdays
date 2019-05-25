@@ -7,6 +7,7 @@ export default class Header extends React.Component {
 		return (
 			<div className="header">
 				Tensy
+				<Link className="team_top" to="/team"><i className="fas fa-users"></i></Link>
 			</div>
 		)
 	}

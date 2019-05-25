@@ -7,6 +7,7 @@ import Services from './Services'
 import Tabbar from './Tabbar'
 import Home from './Home'
 import Header from './Header'
+import Team from './Team'
 import './style.css'
 
 
@@ -55,6 +56,11 @@ class App extends Component {
 				<Switch>
 					<Route exact path="/timeline">
 						<Timeline />
+					</Route>
+				</Switch>
+				<Switch>
+					<Route exact path="/team">
+						<Team />
 					</Route>
 				</Switch>
 				{this.state.showTab &&

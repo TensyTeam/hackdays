@@ -11,6 +11,7 @@ export default class Map extends React.Component {
 			path: null
 		};
 		this.onChange = this.onChange.bind(this);
+		this.onAnalize = this.onAnalize.bind(this);
 	}
 
 	componentWillMount() {
@@ -21,20 +22,31 @@ export default class Map extends React.Component {
 		this.setState({ path: _path });
 	}
 
+	onAnalize() {
+		console.log(1);
+	}
+
 	render() {
 		return (
 			<div className="map">
 				<div>
-					<Link to="/map/temperature" onClick={()=>{this.onChange('/map/temperature')}} className={this.state.path === '/map/temperature' ? 'active' : '' }>Temperature</Link>
-					<Link to="/map/space" onClick={()=>{this.onChange('/map/space')}} className={this.state.path === '/map/space' ? 'active' : '' }>Space</Link>
 					<Link to="/map/density" onClick={()=>{this.onChange('/map/density')}} className={this.state.path === '/map/density' ? 'active' : '' }>Density</Link>
+					<Link to="/map/temperature" onClick={()=>{this.onChange('/map/temperature')}} className={this.state.path === '/map/temperature' ? 'active' : '' }>Temperature</Link>
+					{/* <Link to="/map/space" onClick={()=>{this.onChange('/map/space')}} className={this.state.path === '/map/space' ? 'active' : '' }>Space</Link> */}
 				</div>
 				{this.state.path === '/map/temperature' &&
-					<img src="/../img/map1.png"/>
+					<React.Fragment>
+						<img id="temperature" src="/../img/map1.png"/>
+						Comming soon
+						<span className="btn_block">
+							<button className="btn" onClick={this.onAnalize}>Analize</button>
+						</span>
+					</React.Fragment>
+
 				}
-				{this.state.path === '/map/space' &&
+				{/* {this.state.path === '/map/space' &&
 					<img  src="/../img/map1.png"/>
-				}
+				} */}
 				{this.state.path === '/map/density' &&
 					<MapDens width="100vw" height="100vh" />
 				}
