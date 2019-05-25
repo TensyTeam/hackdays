@@ -9,9 +9,9 @@ import Point from './Point'
 export default class Timeline extends React.Component {
 	render() {
 		return (
-			<div class="card">
-			<ul class="timeline">
-				{events.map(point => <Point name={point.name} description={point.description} time={point.time} />)}
+			<div className="card">
+			<ul className="timeline">
+				{events.map((point, num) => <Point name={point.name} description={point.description} time={point.time} key={num} />)}
 			</ul>
 		</div>
 		)

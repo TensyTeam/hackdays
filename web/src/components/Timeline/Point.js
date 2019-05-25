@@ -28,7 +28,7 @@ export default function(props) {
 
 	/////
 
-	const time = moment(props.time * 1000)
+	const time = moment(props.time * 1000 - 60 * 60 * 2 * 1000)
 
 	const time1 = time.format('HH:mm')
 	const time2 = time.format('D MMMM')

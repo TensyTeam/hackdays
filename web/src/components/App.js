@@ -12,7 +12,7 @@ class App extends Component {
 
 	render() {
 		return (
-			<div className="has-background-white-bis" style={ {'min-height': '100vh'} }>
+			<div className="has-background-white-bis" style={ {minHeight: '100vh'} }>
 				<Timeline />
 			</div>
 		)
