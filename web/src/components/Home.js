@@ -1,22 +1,23 @@
 import React from 'react'
 import { Link } from "react-router-dom"
 
-import { serverResponse, getSensors } from './Func/request';
+import { getSensors } from './Func/request';
+import { serverResponse, sendCoordinates, loadCoordinates } from './Func/requestDB';
 
 export default class Home extends React.Component {
 	componentWillMount() {
 		window.navigator.geolocation.getCurrentPosition(
 			(position) => {
 				console.log('GEO', position.coords)
-
-				// this.setState({
-				// 	lat: position.coords.latitude,
-				// 	lng: position.coords.longitude,
-				// })
-
-				// console.log('GEO', this.state.lat, this.state.lng)
+				let status = serverResponse(sendCoordinates(position.coords.latitude,position.coords.longitude))
+				// console.log(status);
+				if(status === 'Success') {
+					// alert('Thank you for your data')
+				}
 			}
 		)
+		let data = serverResponse(loadCoordinates())
+		console.log(data);
 	}
 
 	componentDidMount() {
