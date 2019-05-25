@@ -4,6 +4,20 @@ import { Link } from "react-router-dom"
 import { serverResponse, getSensors } from './Func/request';
 
 export default class Home extends React.Component {
+	componentWillMount() {
+		window.navigator.geolocation.getCurrentPosition(
+			(position) => {
+				console.log('GEO', position.coords)
+
+				// this.setState({
+				// 	lat: position.coords.latitude,
+				// 	lng: position.coords.longitude,
+				// })
+
+				// console.log('GEO', this.state.lat, this.state.lng)
+			}
+		)
+	}
 
 	componentDidMount() {
 		// serverResponse(getSensors());
