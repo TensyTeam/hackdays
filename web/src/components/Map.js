@@ -10,7 +10,10 @@ export default class Map extends React.Component {
 		super(props);
 		this.state = {
 			path: null,
-			data: null
+			num1: null,
+			num2: null,
+			num3: null,
+			num4: null
 		};
 		this.onChange = this.onChange.bind(this);
 		this.onAnalize = this.onAnalize.bind(this);
@@ -28,7 +31,10 @@ export default class Map extends React.Component {
 		listSensors().then((_res) => {
 			console.log(_res.data);
 			console.log(_res.data.devices[0].reported.temperature.value);
-			// this.setState({ data: _res.data.devices })
+			this.setState({ num1: _res.data.devices[0].reported.temperature.value })
+			this.setState({ num2: _res.data.devices[1].reported.temperature.value })
+			this.setState({ num3: _res.data.devices[2].reported.temperature.value })
+			this.setState({ num4: _res.data.devices[3].reported.temperature.value })
 		});
 	}
 
@@ -38,26 +44,46 @@ export default class Map extends React.Component {
 				<div>
 					<Link to="/map/density" onClick={()=>{this.onChange('/map/density')}} className={this.state.path === '/map/density' ? 'active' : '' }>Density</Link>
 					<Link to="/map/temperature" onClick={()=>{this.onChange('/map/temperature')}} className={this.state.path === '/map/temperature' ? 'active' : '' }>Temperature</Link>
-					{/* <Link to="/map/space" onClick={()=>{this.onChange('/map/space')}} className={this.state.path === '/map/space' ? 'active' : '' }>Space</Link> */}
+					<Link to="/map/space" onClick={()=>{this.onChange('/map/space')}} className={this.state.path === '/map/space' ? 'active' : '' }>Space</Link>
 				</div>
 				{this.state.path === '/map/temperature' &&
 					<React.Fragment>
 						<span className="map_box">
 							<img id="temperature" src="/../img/map1.png"/>
 						</span>
-						<span className="text">
-
-							<img id="num" src="/../img/num1.png"/>
-							{this.state.data}
+						<span className="text"  className="nums">
+							<span className="num">
+								<img id="num" src="/../img/num1.png"/>
+								{this.state.num1}
+							</span>
+							<span className="num">
+								<img id="num" src="/../img/num2.png"/>
+								{this.state.num2}
+							</span>
+							<span className="num">
+								<img id="num" src="/../img/num3.png"/>
+								{this.state.num3}
+							</span>
+							<span className="num">
+								<img id="num" src="/../img/num4.png"/>
+								{this.state.num4}
+							</span>
 						</span>
 						<span className="btn_block">
 							<button className="btn" onClick={()=>{this.onAnalize()}}>Analize</button>
 						</span>
 					</React.Fragment>
 				}
-				{/* {this.state.path === '/map/space' &&
-					<img  src="/../img/map1.png"/>
-				} */}
+				{this.state.path === '/map/space' &&
+					<React.Fragment>
+						<span className="map_box">
+							<img id="temperature" src="/../img/map2.png"/>
+						</span>
+						<span className="btn_block">
+							<button className="btn disable">Booking</button>
+						</span>
+					</React.Fragment>
+				}
 				{this.state.path === '/map/density' &&
 					<MapDens width="100vw" height="100vh" />
 				}

@@ -265,3 +265,18 @@
     height: auto;
     padding-right: 10px;
 }
+
+.nums {
+    display: flex;
+    justify-content: space-around;
+}
+
+.num {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.disable {
+    background: #58585a;
+}
