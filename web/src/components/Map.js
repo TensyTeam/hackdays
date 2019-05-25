@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from "react-router-dom"
 
+import { serverResponse, loadCoordinates } from './Func/requestDB';
 import { listSensors } from './Func/request';
 import MapDens from './MapDens'
 
@@ -21,6 +22,8 @@ export default class Map extends React.Component {
 
 	componentWillMount() {
 		this.setState({ path: document.location.pathname });
+		let data = serverResponse(loadCoordinates())
+		console.log(data);
 	}
 
 	onChange(_path) {
