@@ -1,4 +1,5 @@
 import React from 'react'
+import $ from 'jquery'
 
 
 export default function MapDens(props) {
@@ -22,7 +23,7 @@ export default function MapDens(props) {
 &a3=50.1217453,8.6719\
 &rad3=2\
 &l3=2\
-// \
+\
 &a4=50.1218,8.67185\
 &rad4=2\
 &l4=2\
@@ -51,9 +52,9 @@ export default function MapDens(props) {
 &rad10=2\
 &l10=2\
 \
-&z=18.8\
-&h=' + props.height + '\
-&w=' + props.width + '\
+&z=19\
+&h=' + $(window).height() + '\
+&w=' + $(window).width() + '\
 &op=70\
 &ppi=1'}
 		/>

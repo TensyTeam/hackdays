@@ -17,6 +17,12 @@ export default class Team extends React.Component {
 						<div className="team_info">
 							Product
 						</div>
+						<div className="team_contact">
+							sergeyaikhel@gmail.com
+						</div>
+						<div className="team_contact">
+							WhatsApp <br/>+79602747628
+						</div>
 					</div>
 				</div>
 				<div className="team_block">

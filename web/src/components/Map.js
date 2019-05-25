@@ -36,8 +36,12 @@ export default class Map extends React.Component {
 				</div>
 				{this.state.path === '/map/temperature' &&
 					<React.Fragment>
-						<img id="temperature" src="/../img/map1.png"/>
-						Comming soon
+						<span className="map_box">
+							<img id="temperature" src="/../img/map1.png"/>
+						</span>
+						<span className="text">
+							Comming soon
+						</span>
 						<span className="btn_block">
 							<button className="btn" onClick={this.onAnalize}>Analize</button>
 						</span>
