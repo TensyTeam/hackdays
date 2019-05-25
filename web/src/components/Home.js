@@ -1,7 +1,6 @@
 import React from 'react'
 import { Link } from "react-router-dom"
 
-import { getSensors } from './Func/request';
 import { serverResponse, sendCoordinates, loadCoordinates } from './Func/requestDB';
 
 export default class Home extends React.Component {
@@ -18,10 +17,6 @@ export default class Home extends React.Component {
 		)
 		let data = serverResponse(loadCoordinates())
 		console.log(data);
-	}
-
-	componentDidMount() {
-		getSensors().then(res => console.log(res))
 	}
 
 	render() {

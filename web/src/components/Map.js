@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from "react-router-dom"
 
+import { listSensors } from './Func/request';
 import MapDens from './MapDens'
 
 
@@ -8,7 +9,8 @@ export default class Map extends React.Component {
 	constructor (props) {
 		super(props);
 		this.state = {
-			path: null
+			path: null,
+			data: null
 		};
 		this.onChange = this.onChange.bind(this);
 		this.onAnalize = this.onAnalize.bind(this);
@@ -23,7 +25,11 @@ export default class Map extends React.Component {
 	}
 
 	onAnalize() {
-		console.log(1);
+		listSensors().then((_res) => {
+			console.log(_res.data);
+			console.log(_res.data.devices[0].reported.temperature.value);
+			// this.setState({ data: _res.data.devices })
+		});
 	}
 
 	render() {
@@ -40,10 +46,12 @@ export default class Map extends React.Component {
 							<img id="temperature" src="/../img/map1.png"/>
 						</span>
 						<span className="text">
-							Comming soon
+
+							<img id="num" src="/../img/num1.png"/>
+							{this.state.data}
 						</span>
 						<span className="btn_block">
-							<button className="btn" onClick={this.onAnalize}>Analize</button>
+							<button className="btn" onClick={()=>{this.onAnalize()}}>Analize</button>
 						</span>
 					</React.Fragment>
 				}

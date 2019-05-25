@@ -1,13 +1,13 @@
 import axios from 'axios'
 
 
-const link = 'https://api.disruptive-technologies.com/v2/projects/bjfb7m3httut79sc9hsg/devices/bgutlokc00010i5633u0'
+const link = 'https://api.disruptive-technologies.com/v2/projects/bjfb7m3httut79sc9hsg/devices?device_types=temperature'
 
 
-export function getSensors(activeTab) {
+export function listSensors(activeTab) {
 	const headers = {
 		'accept': 'application/json',
-		'Authorization': 'Bearer 4d7ca02419394674a7049568eecbbab6',
+		'Authorization': 'Bearer  b8bf896d3cd846d7903ef8796f4acbc6',
 	}
 
 	return axios.get(link, {headers: headers})
@@ -25,4 +25,3 @@ export function getSensors(activeTab) {
 //         return response;
 //     }
 // }
-
