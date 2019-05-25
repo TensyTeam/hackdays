@@ -20,7 +20,7 @@ export default class Home extends React.Component {
 	}
 
 	componentDidMount() {
-		// serverResponse(getSensors());
+		getSensors().then(res => console.log(res))
 	}
 
 	render() {
