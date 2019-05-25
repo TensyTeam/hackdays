@@ -83,7 +83,7 @@ export const events = [{
 	'description': 'Hörsaalzentrum Campus Westend',
 	'time': 1558879200,
 }, {
-	'name': 'Geoup picture',
+	'name': 'Group picture',
 	'description': 'Hörsaalzentrum Campus Westend',
 	'time': 1558882800,
 }, {

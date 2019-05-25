@@ -42,7 +42,6 @@ export default class Map extends React.Component {
 							<button className="btn" onClick={this.onAnalize}>Analize</button>
 						</span>
 					</React.Fragment>
-
 				}
 				{/* {this.state.path === '/map/space' &&
 					<img  src="/../img/map1.png"/>
