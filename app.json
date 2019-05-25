@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "Metki",
-    "slug": "Metki",
+    "name": "Tensy",
+    "slug": "tensy",
     "privacy": "public",
     "sdkVersion": "32.0.0",
     "platforms": [
@@ -23,7 +23,11 @@
       "**/*"
     ],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.tensy.metki"
+    },
+    "android": {
+      "package": "com.tensy.metki"
     },
     "description": ""
   }
