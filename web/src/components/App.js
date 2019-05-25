@@ -5,6 +5,7 @@ import Timeline from './Timeline'
 import Map from './Map'
 import Services from './Services'
 import Tabbar from './Tabbar'
+import Home from './Home'
 import Header from './Header'
 import './style.css'
 
@@ -20,7 +21,7 @@ class App extends Component {
 				<Header />
 				<Switch>
 					<Route exact path="/">
-						<Timeline />
+						<Home />
 					</Route>
 				</Switch>
 				<Switch>

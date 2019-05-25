@@ -1,3 +1,7 @@
+#root {
+    font-family: 'Roboto', sans-serif;
+}
+
 .tabbar {
     display: flex;
     position: fixed;
@@ -62,4 +66,23 @@
 .map img {
     margin: 15vh auto;
     width: 100%;
+}
+
+.services-list {
+    margin-top: 50px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.service {
+    background: #6db133;
+    color: #fff;
+    padding: 30px 50px;
+    width: 65%;
+    margin: 20px;
+    border-radius: 10px 0;
+    font-size: 20px;
+    font-weight: bold;
 }

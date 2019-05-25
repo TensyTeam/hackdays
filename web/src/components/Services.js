@@ -4,8 +4,19 @@ import React from 'react'
 export default class Services extends React.Component {
 	render() {
 		return (
-			<div>
-				1
+			<div className="services-list">
+				<div className="service">
+					Cleaning
+				</div>
+				<div className="service">
+					Security
+				</div>
+				<div className="service">
+					Catering
+				</div>
+				<div className="service">
+					Service
+				</div>
 			</div>
 		)
 	}
