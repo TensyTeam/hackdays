@@ -1,6 +1,6 @@
 export const events = [{
 	'name': 'Opening',
-	'description': 'Campus',
+	'description': 'Hörsaalzentrum Campus Westend',
 	'time': 1558634400,
 }, {
 	'name': 'Dinner',
@@ -18,36 +18,64 @@ export const events = [{
 	'name': 'Official Ending',
 	'description': '',
 	'time': 1558652400,
-// }, {
-// 	'name': '',
-// 	'description': '',
-// 	'time': 1558777284,
-// }, {
-// 	'name': '',
-// 	'description': '',
-// 	'time': 1558777284,
-// }, {
-// 	'name': '',
-// 	'description': '',
-// 	'time': 1558777284,
-// }, {
-// 	'name': '',
-// 	'description': '',
-// 	'time': 1558777284,
-// }, {
-// 	'name': '',
-// 	'description': '',
-// 	'time': 1558777284,
-// }, {
-// 	'name': '',
-// 	'description': '',
-// 	'time': 1558777284,
-// }, {
-// 	'name': '',
-// 	'description': '',
-// 	'time': 1558777284,
-// }, {
-// 	'name': '',
-// 	'description': '',
-// 	'time': 1558777284,
+}, {
+	'name': 'Breakfast',
+	'description': 'Hotel or Design Offices',
+	'time': 1558684800,
+}, {
+	'name': 'Coding',
+	'description': 'Design Offices Westendcarree',
+	'time': 1558688400,
+}, {
+	'name': 'Dinner',
+	'description': 'Design Offices Westendcarree',
+	'time': 1558720800,
+}, {
+	'name': 'Coding',
+	'description': 'Design Offices Westendcarree',
+	'time': 1558724400,
+}, {
+	'name': 'Breakfast',
+	'description': 'Hotel or Design Offices',
+	'time': 1558771200,
+}, {
+	'name': 'Coding',
+	'description': 'Design Offices Westendcarree',
+	'time': 1558774800,
+}, {
+	'name': 'Pitch Training',
+	'description': 'Design Offices Westendcarree',
+	'time': 1558789200,
+}, {
+	'name': 'Dinner',
+	'description': 'Design Offices Westendcarree',
+	'time': 1558807200,
+}, {
+	'name': 'Coding',
+	'description': 'Design Offices Westendcarree',
+	'time': 1558810800,
+}, {
+	'name': 'Breakfast',
+	'description': 'Hotel or Design Offices',
+	'time': 1558857600,
+}, {
+	'name': 'Company-specific pitches',
+	'description': 'Design Offices Westendcarree',
+	'time': 1558861200,
+}, {
+	'name': 'Break/Lunch',
+	'description': '',
+	'time': 1558868400,
+}, {
+	'name': 'Final Pitches',
+	'description': 'Hörsaalzentrum Campus Westend',
+	'time': 1558875600,
+}, {
+	'name': 'Award Ceremony',
+	'description': 'Hörsaalzentrum Campus Westend',
+	'time': 1558886400,
+}, {
+	'name': 'Ending',
+	'description': '',
+	'time': 1558893600,
 }]

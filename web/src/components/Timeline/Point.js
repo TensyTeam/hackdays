@@ -34,7 +34,7 @@ export default function(props) {
 	const time2 = time.format('D MMMM')
 
 	return (
-		<li className="timeline__item">
+		<li className="timeline__item" id={ props.time }>
 			<div className="timeline__step">
 				<div className="timeline__step__marker timeline__step__marker--blue"></div>
 			</div>
