@@ -11,17 +11,35 @@ import './style.css'
 
 
 class App extends Component {
-	state = {
-		leftMenu: true,
+	constructor (props) {
+		super(props)
+		this.state = {
+			showTab: false
+		}
+		this.onChange = this.onChange.bind(this);
+	}
+
+	componentDidMount() {
+		if(document.location.pathname === '/') {
+			this.setState({ showTab: false });
+		} else {
+			this.setState({ showTab: true });
+		}
+	}
+
+	onChange() {
+		this.setState({ showTab: true });
 	}
 
 	render() {
 		return (
 			<BrowserRouter>
-				<Header />
+				{this.state.showTab &&
+					<Header />
+				}
 				<Switch>
 					<Route exact path="/">
-						<Home />
+						<Home onChange={this.onChange} />
 					</Route>
 				</Switch>
 				<Switch>
@@ -39,7 +57,9 @@ class App extends Component {
 						<Timeline />
 					</Route>
 				</Switch>
-				<Tabbar />
+				{this.state.showTab &&
+					<Tabbar />
+				}
 			</BrowserRouter>
 		)
 	}

@@ -27,10 +27,10 @@ export default class Map extends React.Component {
 					<Link to="/map/density" onClick={()=>{this.onChange('/map/density')}}>Density</Link>
 				</div>
 				{this.state.path === '/map/temperature' &&
-					<img src="../../img/map1.png"/>
+					<img src="/../img/map1.png"/>
 				}
 				{this.state.path === '/map/density' &&
-					<img src="../../img/map2.png"/>
+					<img src="/../img/map2.png"/>
 				}
 			</div>
 		)

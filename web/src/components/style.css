@@ -86,3 +86,38 @@
     font-size: 20px;
     font-weight: bold;
 }
+
+.home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 90vh;
+    width: 100%;
+}
+
+.text {
+    margin: 20px 10px;
+}
+
+.btn {
+    background: #6db133;
+    margin: 20px 10px;
+    border-radius: 5px;
+    text-align: center;
+    text-shadow: none;
+    text-decoration: none;
+    color: #fff !important;
+    cursor: pointer;
+    font-size: 14px;
+    outline: 0px;
+    padding: 10px 80px;
+    border: 0px;
+    position: relative;
+}
+
+.home img {
+    margin: 20px 10px;
+    width: 100px;
+    height: auto;
+}
