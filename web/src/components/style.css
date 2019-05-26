@@ -315,3 +315,7 @@
 .selected {
     background: #548728;
 }
+
+.notification .btn_block {
+    padding: 20px;
+}
