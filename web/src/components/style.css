@@ -319,3 +319,10 @@
 .notification .btn_block {
     padding: 20px;
 }
+
+.service_top {
+    padding: 10px;
+    position: absolute;
+    left: 0;
+    top: 0;
+}

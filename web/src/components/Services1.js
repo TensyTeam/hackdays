@@ -4,7 +4,7 @@ import $ from 'jquery'
 import { call } from './Func/methods';
 
 
-export default class Services extends React.Component {
+export default class Services1 extends React.Component {
 	render() {
 		const handlerExpert = () => {
 			call(this)
@@ -50,7 +50,7 @@ export default class Services extends React.Component {
 					{/* onClick={ handlerCheck }> */}
 					Service
 				</div>
-				<div className="service">
+				<div className="service active" onClick={ handlerExpert }>
 					Call to expert
 				</div>
 			</div>

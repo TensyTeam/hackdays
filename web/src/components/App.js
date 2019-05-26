@@ -5,6 +5,7 @@ import $ from 'jquery'
 import Timeline from './Timeline'
 import Map from './Map'
 import Services from './Services'
+import Services1 from './Services1'
 import Tabbar from './Tabbar'
 import Home from './Home'
 import Header from './Header'
@@ -77,6 +78,12 @@ class App extends Component {
 				<Switch>
 					<Route exact path="/services">
 						<Services />
+					</Route>
+				</Switch>
+
+				<Switch>
+					<Route exact path="/service">
+						<Services1 />
 					</Route>
 				</Switch>
 				<Switch>
