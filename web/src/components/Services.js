@@ -1,12 +1,16 @@
 import React from 'react'
-import { auth } from './Func/methods';
+import { call, check } from './Func/methods';
 
 
 export default class Services extends React.Component {
 	render() {
 		const handlerExpert = () => {
-			
+			call(this)
 		}
+
+		// const handlerCheck = () => {
+		// 	check(this).then((res) => console.log(res))
+		// }
 
 		return (
 			<div className="services-list">
@@ -22,7 +26,8 @@ export default class Services extends React.Component {
 				<div className="service">
 					Catering
 				</div>
-				<div className="service">
+				<div className="service" >
+					{/* onClick={ handlerCheck }> */}
 					Service
 				</div>
 				<div className="service" onClick={ handlerExpert }>

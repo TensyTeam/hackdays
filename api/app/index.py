@@ -64,3 +64,23 @@ def crossdomain(origin=None, methods=None, headers=None, max_age=21600,
 @crossdomain(origin='*')
 def au():
 	return jsonify({'token': auth()})
+
+@app.route('/call', methods=['POST', 'OPTIONS'])
+@crossdomain(origin='*')
+def ca():
+	with open('call.txt', 'w') as file:
+		print(1, file=file)
+
+	return jsonify({'result': True})
+
+@app.route('/check', methods=['POST', 'OPTIONS'])
+@crossdomain(origin='*')
+def ch():
+	with open('call.txt', 'r') as file:
+		res = file.read().strip()
+	
+	if res == '1':
+		with open('call.txt', 'w') as file:
+			print(0, file=file)
+
+	return jsonify({'result': res == '1'})
