@@ -76,6 +76,7 @@
     align-items: center;
     display: flex;
     flex-direction: column;
+    padding-bottom: 100px;
 }
 
 .service {
@@ -83,10 +84,20 @@
     color: #fff;
     padding: 30px 50px;
     width: 65%;
-    margin: 20px;
-    border-radius: 10px 0;
+    margin: 23px 20px;
+    border-radius: 10px;
     font-size: 20px;
     font-weight: bold;
+}
+
+.chat_block {
+    background: #fff;
+    width: 70%;
+    padding: 20px;
+    border-radius: 5px;
+    margin: 10px;
+    color: #000;
+    font-family: 'Roboto', sans-serif;
 }
 
 .home {
@@ -109,6 +120,7 @@
 
 .text {
     margin: 20px 10px;
+    font-family: 'Roboto', sans-serif;
 }
 
 .btn {
@@ -172,6 +184,10 @@
     padding: 5px 20px;
     border-radius: 15px;
     background: #ffffff50;
+}
+
+.active {
+    background: #6db133c9;
 }
 
 .map_density {
@@ -279,4 +295,23 @@
 
 .disable {
     background: #58585a;
+}
+
+.notification {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 99;
+    background: rgb(109, 177, 51);
+    display: flex;
+    color: #fff;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.selected {
+    background: #548728;
 }

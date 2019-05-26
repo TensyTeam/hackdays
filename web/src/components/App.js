@@ -39,7 +39,23 @@ class App extends Component {
 				if (res) {
 					clearInterval()
 					console.log('!!--!!')
-					$('body').append('<div style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: 99; background: rgba(0, 0, 0, 0.8); color: #fff;"><div>Notification</div></div>')
+					$('body').append('<div class="notification"></div>')
+					setTimeout(function() {
+						$('.notification').append('<div class="text">New request</div>')
+						//<div class="chat_block">Ticket created</div><div class="chat_block">Ticket registered</div><div class="chat_block">Ticket approved</div><div className="btn_block"><button class="btn selected">Ok</button></div>
+					}, 1000);
+					setTimeout(function() {
+						$('.notification').append('<div class="chat_block">Ticket created</div>')
+					}, 2000);
+					setTimeout(function() {
+						$('.notification').append('<div class="chat_block">Ticket registered</div>')
+					}, 4000);
+					setTimeout(function() {
+						$('.notification').append('<div class="chat_block">Ticket approved</div>')
+					}, 6000);
+					setTimeout(function() {
+						$('.notification').append('<div className="btn_block"><a href="/services" class="btn selected" >Ok</a></div>')
+					}, 8000);
 				}
 			})
 		}, 1000)

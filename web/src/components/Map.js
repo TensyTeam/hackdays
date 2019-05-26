@@ -73,7 +73,7 @@ export default class Map extends React.Component {
 							</span>
 						</span>
 						<span className="btn_block">
-							<button className="btn" onClick={()=>{this.onAnalize()}}>Analize</button>
+							<button className="btn" onClick={()=>{this.onAnalize()}}>Analyse</button>
 						</span>
 					</React.Fragment>
 				}
