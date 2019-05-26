@@ -1,11 +1,31 @@
 import React from 'react'
-import { call, check } from './Func/methods';
+import $ from 'jquery'
+
+import { call } from './Func/methods';
 
 
 export default class Services extends React.Component {
 	render() {
 		const handlerExpert = () => {
 			call(this)
+
+			$('body').append('<div class="notification"></div>')
+			setTimeout(function() {
+				$('.notification').append('<div class="text">New request</div>')
+				//<div class="chat_block">Ticket created</div><div class="chat_block">Ticket registered</div><div class="chat_block">Ticket approved</div><div className="btn_block"><button class="btn selected">Ok</button></div>
+			}, 1000);
+			setTimeout(function() {
+				$('.notification').append('<div class="chat_block">Ticket created</div>')
+			}, 2000);
+			setTimeout(function() {
+				$('.notification').append('<div class="chat_block">Ticket registered</div>')
+			}, 4000);
+			setTimeout(function() {
+				$('.notification').append('<div class="chat_block">Ticket approved</div>')
+			}, 6000);
+			setTimeout(function() {
+				$('.notification').append('<div class="btn_block"><a href="/services" class="btn selected">Ok</a></div>')
+			}, 8000);
 		}
 
 		// const handlerCheck = () => {
@@ -26,7 +46,7 @@ export default class Services extends React.Component {
 				<div className="service">
 					Catering
 				</div>
-				<div className="service" >
+				<div className="service">
 					{/* onClick={ handlerCheck }> */}
 					Service
 				</div>

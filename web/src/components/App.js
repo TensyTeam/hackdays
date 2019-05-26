@@ -13,63 +13,61 @@ import './style.css'
 import { check } from './Func/methods'
 
 
+function realtimeGet() {
+	setInterval(function() {
+		check().then((res) => {
+			if (res) {
+				clearInterval()
+				console.log('!!--!!')
+				$('body').append('<div class="notification"></div>')
+				$('.notification').append('<div class="text">New request</div>')
+			}
+		})
+	}, 1000)
+}
+
 class App extends Component {
 	constructor (props) {
 		super(props)
 		this.state = {
 			showTab: false,
 			notif: false,
+			service: false,
 		}
 		this.onChange = this.onChange.bind(this);
+		this.handlerService = this.handlerService.bind(this);
 	}
 
 	componentDidMount() {
 		if (document.location.pathname === '/') {
-			this.setState({ showTab: false });
+			this.setState({ showTab: false })
 		} else {
-			this.setState({ showTab: true });
+			this.setState({ showTab: true })
 		}
 
 		// while (!this.state.notif) {
 		// 	setTimeout(check(this), 1000)
 		// }
 
-		setInterval(function() {
-			check().then((res) => {
-				if (res) {
-					clearInterval()
-					console.log('!!--!!')
-					$('body').append('<div class="notification"></div>')
-					setTimeout(function() {
-						$('.notification').append('<div class="text">New request</div>')
-						//<div class="chat_block">Ticket created</div><div class="chat_block">Ticket registered</div><div class="chat_block">Ticket approved</div><div className="btn_block"><button class="btn selected">Ok</button></div>
-					}, 1000);
-					setTimeout(function() {
-						$('.notification').append('<div class="chat_block">Ticket created</div>')
-					}, 2000);
-					setTimeout(function() {
-						$('.notification').append('<div class="chat_block">Ticket registered</div>')
-					}, 4000);
-					setTimeout(function() {
-						$('.notification').append('<div class="chat_block">Ticket approved</div>')
-					}, 6000);
-					setTimeout(function() {
-						$('.notification').append('<div className="btn_block"><a href="/services" class="btn selected" >Ok</a></div>')
-					}, 8000);
-				}
-			})
-		}, 1000)
+		if (this.state.service) {
+			realtimeGet()
+		}
 	}
 
 	onChange() {
-		this.setState({ showTab: true });
+		this.setState({ showTab: true })
+	}
+
+	handlerService() {
+		this.setState({service: true})
+		realtimeGet()
 	}
 
 	render() {
 		return (
 			<BrowserRouter>
 				{this.state.showTab &&
-					<Header />
+					<Header handlerService={ this.handlerService } yy={ this.state.service } />
 				}
 				<Switch>
 					<Route exact path="/">

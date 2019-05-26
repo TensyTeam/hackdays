@@ -29,6 +29,7 @@ export function check(that) {
 	return new Promise(function(resolve, reject) {
 		const handlerSuccess = (other, res) => {
 			// other.setState({notif: true})
+			console.log(res)
 			resolve(res['result'])
 		}
 
