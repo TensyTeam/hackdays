@@ -37,7 +37,7 @@ export default class Map extends React.Component {
 			this.setState({ num1: _res.data.devices[0].reported.temperature.value })
 			this.setState({ num2: _res.data.devices[1].reported.temperature.value })
 			this.setState({ num3: _res.data.devices[2].reported.temperature.value })
-			this.setState({ num4: _res.data.devices[3].reported.temperature.value })
+			this.setState({ num4: _res.data.devices[28].reported.temperature.value })
 		});
 	}
 

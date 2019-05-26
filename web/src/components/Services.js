@@ -11,7 +11,7 @@ export default class Services extends React.Component {
 
 			$('body').append('<div class="notification"></div>')
 			setTimeout(function() {
-				$('.notification').append('<div class="text">New request</div>')
+				$('.notification').append('<div class="text">Get to the stage</div>')
 				//<div class="chat_block">Ticket created</div><div class="chat_block">Ticket registered</div><div class="chat_block">Ticket approved</div><div className="btn_block"><button class="btn selected">Ok</button></div>
 			}, 1000);
 			setTimeout(function() {

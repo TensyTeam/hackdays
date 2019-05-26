@@ -21,7 +21,7 @@ function realtimeGet() {
 				clearInterval()
 				console.log('!!--!!')
 				$('body').append('<div class="notification"></div>')
-				$('.notification').append('<div class="text">New request</div>')
+				$('.notification').append('<div class="text">Get to the stage</div>')
 			}
 		})
 	}, 1000)
