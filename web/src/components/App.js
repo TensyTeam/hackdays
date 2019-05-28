@@ -19,7 +19,7 @@ function realtimeGet() {
 		check().then((res) => {
 			if (res) {
 				clearInterval()
-				console.log('!!--!!')
+				// console.log('!!')
 				$('body').append('<div class="notification"></div>')
 				$('.notification').append('<div class="text">Get to the stage</div>')
 			}

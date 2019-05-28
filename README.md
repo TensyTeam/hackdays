@@ -1,2 +1,2 @@
-# hackdays
-Tensy - hackdays Hack
+# Hackdays
+Tensy - smart office

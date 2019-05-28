@@ -23,11 +23,6 @@ package-lock.json
 dist/
 build/
 
-## Мобильная разработка
-
-.expo/
-.expo-shared/
-
 # Ключи и настройки
 
 keys.py

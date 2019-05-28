@@ -9,9 +9,8 @@ export default class Home extends React.Component {
 			(position) => {
 				console.log('GEO', position.coords)
 				let status = serverResponse(sendCoordinates(position.coords.latitude,position.coords.longitude))
-				// console.log(status);
 				if(status === 'Success') {
-					// alert('Thank you for your data')
+					alert('Thank you for your data')
 				}
 			}
 		)
