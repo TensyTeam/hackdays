@@ -84,23 +84,3 @@ def ch():
 			print(0, file=file)
 
 	return jsonify({'result': res == '1'})
-
-# @app.route('/answer', methods=['POST', 'OPTIONS'])
-# @crossdomain(origin='*')
-# def an():
-# 	with open('answer.txt', 'w') as file:
-# 		print(1, file=file)
-
-# 	return jsonify({'result': True})
-
-# @app.route('/check_answer', methods=['POST', 'OPTIONS'])
-# @crossdomain(origin='*')
-# def cha():
-# 	with open('answer.txt', 'r') as file:
-# 		res = file.read().strip()
-
-# 	if res == '1':
-# 		with open('answer.txt', 'w') as file:
-# 			print(0, file=file)
-
-# 	return jsonify({'result': res == '1'})

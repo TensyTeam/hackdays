@@ -41,14 +41,3 @@ def auth():
     return access_token
 
 # # Now let's list out the projects
-
-# # It can be used as a query string parameter:
-# projects = requests.get(projects_api + "?" + urlencode({"token": access_token})).json()
-# print("Request projects via query parameter ({}?token={}):".format(projects_api, access_token))
-# print(projects)
-# print()
-
-# # Or we can use it as a header:
-# projects = requests.get(projects_api, headers={"authorization": "bearer " + access_token}).json()
-# print("Request projects via header ('authorization': 'bearer {}'):".format(access_token))
-# print(projects)
