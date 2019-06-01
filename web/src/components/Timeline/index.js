@@ -17,7 +17,9 @@ export default class Timeline extends React.Component {
 
 	componentDidMount() {
 		setTimeout(() => {
-			let time_now = new Date().getTime() / 1000
+			// let time_now = new Date().getTime() / 1000
+			let time_now = 1558684800
+
 
 			let time_list = []
 			events.map(point => {

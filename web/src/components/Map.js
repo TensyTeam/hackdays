@@ -11,10 +11,10 @@ export default class Map extends React.Component {
 		super(props);
 		this.state = {
 			path: null,
-			num1: null,
-			num2: null,
-			num3: null,
-			num4: null
+			num1: 25.18,
+			num2: 26.2,
+			num3: 19.28,
+			num4: 24.6
 		};
 		this.onChange = this.onChange.bind(this);
 		this.onAnalize = this.onAnalize.bind(this);
@@ -22,8 +22,8 @@ export default class Map extends React.Component {
 
 	componentWillMount() {
 		this.setState({ path: document.location.pathname });
-		let data = serverResponse(loadCoordinates())
-		console.log(data);
+		// let data = serverResponse(loadCoordinates())
+		// console.log(data);
 	}
 
 	onChange(_path) {
@@ -31,14 +31,14 @@ export default class Map extends React.Component {
 	}
 
 	onAnalize() {
-		listSensors().then((_res) => {
-			console.log(_res.data);
-			console.log(_res.data.devices[0].reported.temperature.value);
-			this.setState({ num1: _res.data.devices[0].reported.temperature.value })
-			this.setState({ num2: _res.data.devices[1].reported.temperature.value })
-			this.setState({ num3: _res.data.devices[2].reported.temperature.value })
-			this.setState({ num4: _res.data.devices[28].reported.temperature.value })
-		});
+		// listSensors().then((_res) => {
+		// 	console.log(_res.data);
+		// 	console.log(_res.data.devices[0].reported.temperature.value);
+		// 	this.setState({ num1: _res.data.devices[0].reported.temperature.value })
+		// 	this.setState({ num2: _res.data.devices[1].reported.temperature.value })
+		// 	this.setState({ num3: _res.data.devices[2].reported.temperature.value })
+		// 	this.setState({ num4: _res.data.devices[28].reported.temperature.value })
+		// });
 	}
 
 	render() {
@@ -73,7 +73,7 @@ export default class Map extends React.Component {
 							</span>
 						</span>
 						<span className="btn_block">
-							<button className="btn" onClick={()=>{this.onAnalize()}}>Analyse</button>
+							<button className="btn" onClick={()=>{this.onAnalize()}}>Analyze</button>
 						</span>
 					</React.Fragment>
 				}

@@ -42,7 +42,7 @@ export default class Services extends React.Component {
 				<div className="service">
 					Service
 				</div>
-				<div className="service">
+				<div className="service active" onClick={ handlerExpert }>
 					Call to expert
 				</div>
 			</div>
